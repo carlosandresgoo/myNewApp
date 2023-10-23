@@ -1,0 +1,19 @@
+<form (ngSubmit)="crearObjeto()" [formGroup]="form">
+    <mat-form-field>
+        <mat-label>Producto</mat-label>
+        <input formControlName="producto" matInput>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Color</mat-label>
+        <mat-select  formControlName="color">
+            <mat-option value="rojo">Rojo</mat-option>
+            <mat-option value="verde">Verde</mat-option>
+            <mat-option value="azul">Azul</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea  formControlName="descripcion" matInput></textarea>
+    </mat-form-field>
+    <button type="submit" [disabled]="form.invalid" mat-button color="primary">Primary</button>
+</form>
